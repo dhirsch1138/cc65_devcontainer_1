@@ -3,3 +3,8 @@
 202411171848 - moved c65 firmware and rules into child folder .c65
 202411172114 - paths fully defined in makefile, so moving them in future should be easier
 
+
+TODO:
+* get make file to dynamically enumerate *.s files
+* Create task to run minipro
+* research how to let minipro write to plugged in usb thingie

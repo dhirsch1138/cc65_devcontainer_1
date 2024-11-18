@@ -4,8 +4,7 @@
 	"name": "Debian + cc6502",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
-	"features": {
-		"ghcr.io/jungaretti/features/make:1": {},
+	"features": {	
 		"ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
 			"upgradePackages":true,
 			"packages": "cc65 build-essential pkg-config git libusb-1.0-0-dev fakeroot debhelper dpkg-dev libb64-dev udev"
