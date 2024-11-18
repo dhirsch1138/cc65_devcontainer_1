@@ -1,0 +1,5 @@
+202411161900 - creates dev container with cc65 and build tools, rudimentary makefile setup
+202411171759 - clones down minipro, builds deb for it, and installs it
+202411171848 - moved c65 firmware and rules into child folder .c65
+202411172114 - paths fully defined in makefile, so moving them in future should be easier
+
