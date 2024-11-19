@@ -1,5 +1,6 @@
 #Project source file names
-ASM_SOURCEFILENAMES=blink.s
+#ASM_SOURCEFILENAMES=blink.s
+ASM_SOURCEFILENAMES=$(wildcard *.s)
 ROM_NAME=blink
 
 #Static folder housing c65 build config
