@@ -8,7 +8,11 @@ TEMP_FOLDER=$(BUILD_FOLDER)/$(ROM_NAME)
 ROM_FILE=$(BUILD_FOLDER)/$(ROM_NAME).bin
 MAP_FILE=$(TEMP_FOLDER)/$(ROM_NAME).map
 
-ASM_OBJECTS=$(ASM_SOURCES:%.s=$(TEMP_FOLDER)/%.o)
+ASM_SOURCEFILENAMES=$(patsubst $(ASM_SOURCEFOLDER)%,%,$(ASM_SOURCES))
+
+$(info        Source files to assemble $(ASM_SOURCEFILENAMES))
+ASM_OBJECTS=$(ASM_SOURCEFILENAMES:%.s=$(TEMP_FOLDER)/%.o)
+$(info        Objects to build $(ASM_OBJECTS))
 
 # Compile assembler sources
 $(TEMP_FOLDER)/%.o: %.s
