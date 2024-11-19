@@ -7,8 +7,9 @@
 	"features": {	
 		"ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
 			"upgradePackages":true,
-			"packages": "cc65 build-essential pkg-config git libusb-1.0-0-dev fakeroot debhelper dpkg-dev libb64-dev udev"
+			"packages": "git"
 		},
+		"./src/cc65":{},
 		"./src/minipro":{}
 		//TODO eventually get this feature in its own container
 	},

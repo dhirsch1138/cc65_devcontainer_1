@@ -1,9 +1,9 @@
 {
     "image": "mcr.microsoft.com/devcontainers/base:bookworm",
-    "name": "minipro chip programmer",
-    "id": "minipro",
+    "name": "cc65 compiler",
+    "id": "cc65",
     "version": "1.0.0",
-    "description": "A free and open command-line program for controlling chip programmers by Autoelectric / Xgecu.",
+    "description": "cc65 compiler/assembler/linker for the 6502x family",
     "options": {},
     "installsAfter": [
         "ghcr.io/devcontainers-extra/features/apt-get-packages"

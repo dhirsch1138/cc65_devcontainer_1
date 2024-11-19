@@ -3,6 +3,7 @@
 202411171848 - moved c65 firmware and rules into child folder .c65
 202411172114 - paths fully defined in makefile, so moving them in future should be easier
 202411181754 - moved minipro build and install into a locally defined feature, removed vscode json as they are not needed
+202411182017 - moved cc65 install into a locally defined feature
 
 TODO:
 * get make file to dynamically enumerate *.s files
