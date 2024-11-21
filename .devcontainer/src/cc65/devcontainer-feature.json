@@ -5,7 +5,5 @@
     "version": "1.0.0",
     "description": "cc65 compiler/assembler/linker for the 6502x family",
     "options": {},
-    "installsAfter": [
-        "ghcr.io/devcontainers-extra/features/apt-get-packages"
-    ]
+    "installsAfter": []
 }

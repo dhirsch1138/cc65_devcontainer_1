@@ -5,7 +5,5 @@
     "version": "1.0.0",
     "description": "A free and open command-line program for controlling chip programmers by Autoelectric / Xgecu.",
     "options": {},
-    "installsAfter": [
-        "ghcr.io/devcontainers-extra/features/apt-get-packages"
-    ]
+    "installsAfter": []
 }

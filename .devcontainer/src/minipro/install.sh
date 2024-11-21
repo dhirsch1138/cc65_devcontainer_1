@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install libusb-1.0-0-dev fakeroot debhelper dpkg-dev libb64-dev udev -y
+sudo apt install libusb-1.0-0-dev fakeroot debhelper dpkg-dev libb64-dev udev git -y
 mkdir .tempbuild
 cd .tempbuild
 git clone https://gitlab.com/DavidGriffith/minipro.git
