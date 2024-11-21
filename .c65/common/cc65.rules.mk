@@ -10,12 +10,12 @@ MAP_FILE=$(TEMP_FOLDER)/$(ROM_NAME).map
 
 ASM_SOURCEFILENAMES=$(patsubst $(ASM_SOURCEFOLDER)%,%,$(ASM_SOURCES))
 
-$(info        Source files to assemble $(ASM_SOURCEFILENAMES))
+$(info        INFO: Source files to assemble $(ASM_SOURCEFILENAMES))
 ASM_OBJECTS=$(ASM_SOURCEFILENAMES:%.s=$(TEMP_FOLDER)/%.o)
-$(info        Objects to build $(ASM_OBJECTS))
+$(info        INFO: Objects to build $(ASM_OBJECTS))
 
 # Compile assembler sources
-$(TEMP_FOLDER)/%.o: %.s
+$(TEMP_FOLDER)/%.o: $(ASM_SOURCEFOLDER)%.s
 	@$(MKDIR_BINARY) $(MKDIR_FLAGS) $(TEMP_FOLDER)
 	$(CA65_BINARY) $(CA65_FLAGS) -o $@ -l $(@:.o=.lst) $<
 

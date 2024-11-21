@@ -5,6 +5,8 @@
 202411181754 - moved minipro build and install into a locally defined feature, removed vscode json as they are not needed
 202411182017 - moved cc65 install into a locally defined feature
 
+Everything after is in GIT
+
 TODO:
 * get make file to dynamically enumerate *.s files
 * Create task to run minipro
