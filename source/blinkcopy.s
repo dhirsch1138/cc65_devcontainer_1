@@ -1,4 +1,0 @@
-  ror
-  ror
-  ror
-  
