@@ -2,12 +2,23 @@
 ;
 ;adaptation of https://github.com/dbuchwald/cc65-tools/blob/main/tutorial/03_blink/blink.s by dbuchwald
 ;
+;The first difference we'll see is the inclusion of other source files (note they do not have .s extensions, we do not want
+;them assembled as their own objects). 
+; ca65 documentaiton: https://cc65.github.io/doc/ca65.html#ss11.66
+;It works like you'd expect an include, the assembler will combine the included files with the source before assembling.
+;
 ;Include the reset file for the vector
   .include "reset_interrupt.s.inc"
 ;Include the via file (we can use the .inc file as a sort of header, defining the imports there and keeping this source clean)
   .include "via.s.inc" 
- 
- ;This is shorthand for .segment "CODE"
+ ;
+ ;
+ ;Aside from the obvious inclusion of the included files, the next big difference we'll see is that
+ ;the ".org $8000" is gone and replaced with just ".code"
+ ;
+ ;This is another thing we get from cc65 https://cc65.github.io/doc/ca65.html#.CODE
+ ;
+ ;It is basically a hard coded SEGMENT https://cc65.github.io/doc/ca65.html#.SEGMENT that always gets created for the code.
  ;
  ;What does the compiler do with all this? Let me take a bit from the generated build\output\output.map
  ;file that the compiler creates for us when we do a "make all" (do it yourself on this example to see the full file)
@@ -49,7 +60,7 @@
  ;* We also define a fill, and a fillvall of $00. So we'll fill the empty space with $00
  ;* And "file" parameter without a type looks like it is just asserting (even though this is default) that binary output (.bin) is desired
  ;
- ;What does this mean? This is a dynamic shorthand for:
+ ;In short, what does this mean? This is a dynamic shorthand for:
  ;  .org $8000
   .code
 
