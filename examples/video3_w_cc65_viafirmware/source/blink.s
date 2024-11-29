@@ -1,5 +1,7 @@
 ;PURPOSE - This is the code which will written to ROM at $0000 (but will be referenced by the Ben Eater 6502 as $8000)
 ;
+;adaptation of https://github.com/dbuchwald/cc65-tools/blob/main/tutorial/03_blink/blink.s by dbuchwald
+;
 ;Include the reset file for the vector
   .include "reset_interrupt.s.inc"
 ;Include the via file (we can use the .inc file as a sort of header, defining the imports there and keeping this source clean)
