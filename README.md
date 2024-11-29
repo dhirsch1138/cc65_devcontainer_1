@@ -102,6 +102,7 @@ This dev container has three examples of different implementations of Ben Eater'
 Reminder: the code from the examples will need to be moved into source/ and .c65/firmware to actually build them.
 
 ## Jumpstart: stage an example
+*** REVIEW THE SCRIPT YOURSELF BEFORE RUNNING, I AM NEW AT BASH SO BE WARNED ***
 To help get you started you can:
 * Run "stage/stage_video3_w_cc65_firmware.sh" to stage my shiny example of Ben Eater's day 3 blink.s (https://eater.net/downloads/blink.s https://eater.net/6502) code **WARNING THIS MIGHT SQUISH ANY CODE YOU HAVE, BACKUP FIRST**
  * It will put the source files into source/
