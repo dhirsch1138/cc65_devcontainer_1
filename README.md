@@ -50,7 +50,7 @@ A few VS Code shortcuts to know:
 ## Code and Firmware
 To build a project, the source code and firmware.cfg file will need to be in the correct directories in the dev container:
 
-Two folders house your project's content that is subject to change:
+Two places house your project's content that is subject to change:
 * Source goes in : source/*
 * Firmware goes in : .c65/firmware/firmware.cfg
 
@@ -74,7 +74,7 @@ In summary (again):
 * Source goes in : source/*
 * Firmware goes in : .c65/firmware/firmware.cfg
 
-Again: This dev container comes with NO FIRMWARE OR SOURCE in the required directories.
+Again: This dev container comes with NO FIRMWARE OR SOURCE in the required directories. See the Jumpstart section for one way to get started.
 
 ## Compiling Projects And Writing Eprom
 ### Assembling & Linking
