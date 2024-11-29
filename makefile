@@ -1,5 +1,5 @@
 #Specify target ROM
-ROM_NAME=blink
+ROM_NAME=output
 
 #Static folders
 C65FOLDER=.c65/

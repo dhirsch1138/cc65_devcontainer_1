@@ -13,9 +13,11 @@
 		"./src/minipro":{}
 	},
 	"customizations": {
-		"vscode": {"extensions": ["ms-vscode.makefile-tools",
+		"vscode": {"extensions": [
+			                      "ms-vscode.makefile-tools",
 		                          "tlgkccampbell.code-ca65",
-								  "github.vscode-github-actions"]}
+								  "github.vscode-github-actions"
+								  ]}
 	},
 
 	//hack to make fakeroot performant (I run Fedora, seems to affect that OS per report)

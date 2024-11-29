@@ -7,9 +7,11 @@ reset:
   lda #$50
   sta $6000
 
-  .include "loop.s.inc"
+loop:
+  ror
+  sta $6000
 
-  .segment "VECTORS"
-  .word $0000
-  .word reset
-  .word $0000
+  jmp loop
+
+  .include "reset_interrupt.s.inc"
+  
