@@ -79,7 +79,7 @@ Again: This dev container comes with NO FIRMWARE OR SOURCE in the required direc
 ### Assembling & Linking
 - Open a terminal instance for the container.
 - Make sure you are in the base folder of the image (where the makefile is)
-- run "main all"
+- run "make all"
 - If all goes well, your generated binary will be placed in build/output.bin
 
 ### Looking at generated "output.bin" using hexdump
