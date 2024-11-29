@@ -28,9 +28,15 @@ Source Code
 Assembling & Linking
 * "make all" to build the source, generated "output.bin" will be placed in build.
 
+**Quick Examples**
+# Ben's example is in source_example\original_example
+# My (mostly dbuchwald's) cc65'd version of Ben's example is in source_example\cc65_example
+
 
 **Attributions and Resources**
 * **dbuchwald** https://github.com/dbuchwald/cc65-tools This project is only possible because of their makefile rules and configuration. Sorry for butchering your work. Please give me suggestions/pointers/advice.
 * **MINIPRO** https://gitlab.com/DavidGriffith/minipro As this project clones, builds, packages, and utilizes minipro. 
 * **Ben Eater** https://eater.net/6502 The amazing person who has taught us all a lot, and put an amazing tutorial together
 * **Garth Wilson** http://wilsonminesco.com/6502primer/65tutor_intro.html The 6502 primer. Enough said.
+* **VASM** http://sun.hasenbraten.de/vasm the first assembler Ben introduces us too.
+* **cc65** https://cc65.github.io/ development package platform for 6502 family
