@@ -59,8 +59,7 @@ This dev container comes with NO FIRMWARE OR SOURCE in the required directories.
 ### Source Code
 * All *.s files in source will be assembled and linked. This means they can and will step on eachother in the resulting output if you are not careful. 
 * *.s files can include other files without that extension and the resulting combined file will treated as a single *.s file. 
-* These concepts are shown in the following examples:
- * examples/video3_w_cc65 demonstrates a simple example of an include file (the *.inc extension doesn't matter, I just picked it)
+* These concepts are shown in the following example(s):
  * examples/video3_w_cc65_viafirmware demonstrates include files and multiple *.s files
 
 ### Firmware
@@ -96,8 +95,8 @@ If for whatever reason minipro isn't playing nice (again it is untested, sorry) 
 # Quick Examples
 This dev container has three examples of different implementations of Ben Eater's blink.s program from Video 3. All three of these examples build into an identical resulting output.bin, they just illustrate how the functionality of cc65 can be leveraged to help remove mental labor from the coder.
 - examples/video3_original - Ben's rotating led blinker "blinks." from video 3 is in examples\video3_original
-- examples/video3_w_cc65 - My (mostly dbuchwald's) cc65'd version of Ben's example is in examples\video3_w_cc65
-- examples/video3_w_cc65_viafirmware - illustrates how the firmware can be leveraged to dynamically handle memory spaces like the addresses we've assigned to the VIA, and eliminate the fragile hard coded memory references for via addresses like $6000.
+- examples/video3_w_cc65 - dbuchwald's cc65'd version of Ben's example is in examples\video3_w_cc65
+- examples/video3_w_cc65_viafirmware - illustrates how the firmware can be leveraged to dynamically handle memory spaces like the addresses we've assigned to the VIA, and eliminate the fragile hard coded memory references for via addresses like $6000. We also introduce included files to keep our codebase organized. Again, most of this is dbuchwald's fine work.
 
 Reminder: the code from the examples will need to be moved into source/ and .c65/firmware to actually build them.
 
