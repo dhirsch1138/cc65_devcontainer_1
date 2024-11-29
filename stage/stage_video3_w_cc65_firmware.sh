@@ -17,9 +17,8 @@ elif [ ! -d $sanityfolder2 ]
 elif [ "$(basename "`pwd`")" = "$containtername" ]
    then
    echo doing copy to stage content
-   echo cp $source/* ./ -r
-   cp $source/* ./ -r
+   echo cp $source/. ./ -rn
+   cp $source/. ./ -rn
 #ELSE abort
 else echo No in expected devcontainer folder $containtername
 fi
-#cp ../examples/video3_w_cc65_viafirmware ../ -r
