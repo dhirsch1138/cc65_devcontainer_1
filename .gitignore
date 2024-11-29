@@ -1,4 +1,5 @@
-build/
+build/*
+!build/
 source/*
 !source/
 .c65/firmware/*

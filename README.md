@@ -116,4 +116,6 @@ To help get you started you can:
 * **Garth Wilson** http://wilsonminesco.com/6502primer/65tutor_intro.html The 6502 primer. Enough said.
 * **VASM** http://sun.hasenbraten.de/vasm the first assembler Ben introduces us too.
 * **cc65** https://cc65.github.io/ development package platform for 6502 family
+ * **ca65** https://cc65.github.io/doc/ca65.html assembler guide (for our source code)
+ * **ld65** https://cc65.github.io/doc/ld65.html linker guide (for the firmware.cfg)
 * **Dev Containers** https://code.visualstudio.com/docs/devcontainers/containers all about dev containers

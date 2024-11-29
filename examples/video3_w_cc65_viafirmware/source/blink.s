@@ -6,9 +6,47 @@
   .include "via.s.inc" 
  
  ;This is shorthand for .segment "CODE"
- ;This references the "CODE" segment defined in firmware.cfg file.
- ; * "CODE" is loaded into MEMORY block "ROM"
- ; * MEMORY block "ROM" has a defined start point of $8000
+ ;
+ ;What does the compiler do with all this? Let me take a bit from the generated build\output\output.map
+ ;file that the compiler creates for us when we do a "make all" (do it yourself on this example to see the full file)
+ 
+ ;Segment list:
+ ;-------------
+ ;Name                   Start     End    Size  Align
+ ;----------------------------------------------------
+ ;CODE                  008000  008010  000011  00001
+ ;VECTORS               00FFFA  00FFFF  000006  00001
+
+ ;We can see that the CODE address space starts at 08000 (and for this program, ends at 008010). But where
+ ;are we, as the programmer, defining this?
+ ;the firmware file in .c65/firmware/firmware.cfg
+ ; reference: https://cc65.github.io/doc/ld65.html
+ ;  
+ ;MEMORY
+ ;{
+ ; VIA:       start=$6000, size=$0010, type=rw, define=yes;
+ ; ROM:       start=$8000, size=$8000, type=ro, define=yes, fill=yes,   fillval=$00, file=%O;
+ ;}
+
+ ;SEGMENTS
+ ;{
+ ; CODE:      load=ROM,       type=ro,  define=yes;
+ ; VECTORS:   load=ROM,       type=ro,  define=yes,   offset=$7ffa, optional=yes;
+ ;}
+ ;
+ ;So we can see that CODE is a memory segment, that we tell the linker is read only (cause it is rom). The linker will now try to help us and yell
+ ;if it thinks we are going to try to write to an address in CODE.
+ ;
+ ;CODE says it is loading from the ROM segment. It says define true (yes) so that it could be imported and used as an address in source.
+ ;
+ ;The ROM segment has other useful parameters
+ ;* It is starting at $8000. Remember Ben's 2nd 6502 video? that is where our addressable ROM starts. This is good.
+ ;* We see that it is $8000 in size, thus we have 16384 addressable bytes or 16KB. Again, this conforms with what Ben said
+ ;* It says define true (yes) so that it could be imported and used as an address in source.
+ ;* This is read only space. This makes sense as it is rom. The linker will also try to yell if it thinks we are going to try and write to that ro space
+ ;* We also define a fill, and a fillvall of $00. So we'll fill the empty space with $00
+ ;* And "file" parameter without a type looks like it is just asserting (even though this is default) that binary output (.bin) is desired
+ ;
  ;What does this mean? This is a dynamic shorthand for:
  ;  .org $8000
   .code
@@ -44,4 +82,3 @@ loop:
   jmp loop
 
 
-  
