@@ -1,17 +1,22 @@
-  .code
+
+  .include "reset_interrupt.s.inc"
+  .include "via.s.inc" 
+
+  .segment "CODE"
+ ; .code
 
 reset:
   lda #$ff
-  sta $6002
+  sta VIA_DDRB
 
   lda #$50
-  sta $6000
+  sta VIA_PORTB
 
 loop:
   ror
-  sta $6000
+  sta VIA_PORTB
 
   jmp loop
 
-  .include "reset_interrupt.s.inc"
+
   
