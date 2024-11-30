@@ -11,7 +11,8 @@
 	"customizations": {
 		"vscode": {"extensions": [
 			                      "ms-vscode.makefile-tools",
-								  "github.vscode-github-actions"
+								  "github.vscode-github-actions",
+								  "tlgkccampbell.code-ca65"
 								  ]}
 	},
 
