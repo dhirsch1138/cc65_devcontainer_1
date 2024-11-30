@@ -5,17 +5,12 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	"features": {	
-		//TODO: get these local features into their own published features
-		//This container will use the following features:
-		//* cc65 to assemble and link the 6502 assembly into *.bin files
-		//* minipro to write the target *.bin files to the eprom
-		"./src/cc65":{},
+		"ghcr.io/dhirsch1138/cc65_feature/cc65:1": {},
 		"ghcr.io/dhirsch1138/minipro_feature/minipro:1": {}
 	},
 	"customizations": {
 		"vscode": {"extensions": [
 			                      "ms-vscode.makefile-tools",
-		                          "tlgkccampbell.code-ca65",
 								  "github.vscode-github-actions"
 								  ]}
 	},

@@ -1,9 +1,0 @@
-{
-    "image": "mcr.microsoft.com/devcontainers/base:bookworm",
-    "name": "cc65 compiler",
-    "id": "cc65",
-    "version": "1.0.0",
-    "description": "cc65 compiler/assembler/linker for the 6502x family",
-    "options": {},
-    "installsAfter": []
-}
