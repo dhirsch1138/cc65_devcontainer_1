@@ -1,9 +1,0 @@
-{
-    "image": "mcr.microsoft.com/devcontainers/base:bookworm",
-    "name": "minipro chip programmer",
-    "id": "minipro",
-    "version": "1.0.0",
-    "description": "A free and open command-line program for controlling chip programmers by Autoelectric / Xgecu.",
-    "options": {},
-    "installsAfter": []
-}

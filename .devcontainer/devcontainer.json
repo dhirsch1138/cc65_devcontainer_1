@@ -10,7 +10,7 @@
 		//* cc65 to assemble and link the 6502 assembly into *.bin files
 		//* minipro to write the target *.bin files to the eprom
 		"./src/cc65":{},
-		"./src/minipro":{}
+		"ghcr.io/dhirsch1138/minipro_feature/minipro:1": {}
 	},
 	"customizations": {
 		"vscode": {"extensions": [
