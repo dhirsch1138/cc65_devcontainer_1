@@ -13,7 +13,7 @@ C65PATH=$(C65FOLDER)
 
 #Full file and folder paths used during build
 ASM_SOURCES:=$(wildcard $(ASM_SOURCEFOLDER)*.s)
-FIRMWARE_CFG=$(C65PATH)firmware/firmware.cfg
+FIRMWARE_CFG=$(ASM_SOURCEFOLDER)firmware.cfg
 COMMON_FOLDER=$(C65PATH)common/
 
 #Build path is currently annoying because I am lazy and have to leave off the trailing slash

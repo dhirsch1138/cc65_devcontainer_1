@@ -3,7 +3,7 @@ This is my meager attempt to create functional 6502 dev container for use with b
 
 It gives you:
 * An installed and configured 6502 compile chain in cc65, with the 'make file' already built
- * This gives more features than vasm see the examples in examples\
+ * This gives more features than vasm (see the examples\ folder)
  * This is a standardized chain that also supports C code (though my file and rules prob won't support that)
 * 6502 specific vs code extensions
 * Minipro already installed and ready to rock
@@ -51,8 +51,8 @@ A few VS Code shortcuts to know:
 To build a project, the source code and firmware.cfg file will need to be in the correct directories in the dev container:
 
 Two places house your project's content that is subject to change:
-* Source goes in : source/*
-* Firmware goes in : .c65/firmware/firmware.cfg
+* Source goes in : source/*.s
+* Firmware goes in : source/firmware.cfg
 
 This dev container comes with NO FIRMWARE OR SOURCE in the required directories. See the Jumpstart section for one way to get started.
 
@@ -63,15 +63,15 @@ This dev container comes with NO FIRMWARE OR SOURCE in the required directories.
  * examples/video3_w_cc65_viafirmware demonstrates include files and multiple *.s files
 
 ### Firmware
-Defines memory spaces & segments that your code will use. This sounds scary, don't panic. I'll try to explain it in comments as part of my examples. For now, just know that **firmware is defined in .c65/firmware/firmware.cfg**
+Defines memory spaces & segments that your code will use. This sounds scary, don't panic. I'll try to explain it in comments as part of my examples. For now, just know that **firmware is defined in source/firmware.cfg**
 The firmware file is mandatory for cc65. When in doubt, simpler is better if you don't need the extra features. They are in all three examples:
 * examples/video3_original has a simple firmware definition, just declaring the code address range: starting at $8000 for $8000 bytes. The reset segment is defined too.
 * examples/video3_w_cc65 has the same simple firmware definition, just declaring the code address range: starting at $8000 for $8000 bytes. The reset segment is defined too.
 * examples/video3_w_cc65_viafirmware has the same code address range, but also reserved addresses for the VIA. This lets the code reference the VIA address space dynamically.
 
 In summary (again):
-* Source goes in : source/*
-* Firmware goes in : .c65/firmware/firmware.cfg
+* Source goes in : source/*.s
+* Firmware goes in : source/firmware.cfg
 
 Again: This dev container comes with NO FIRMWARE OR SOURCE in the required directories. See the Jumpstart section for one way to get started.
 
@@ -105,7 +105,7 @@ Reminder: the code from the examples will need to be moved into source/ and .c65
 To help get you started you can:
 * Run "stage/stage_video3_w_cc65_firmware.sh" to stage my shiny example of Ben Eater's day 3 blink.s (https://eater.net/downloads/blink.s https://eater.net/6502) code **WARNING THIS MIGHT SQUISH ANY CODE YOU HAVE, BACKUP FIRST**
  * It will put the source files into source/
- * It will put the firmware.cfg into .c65/firmware/
+ * It will put the firmware.cfg into source/
 * You can simply copy the contents of any of the examples in examples/
 * You can write your own.
 
