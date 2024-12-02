@@ -29,13 +29,13 @@ I am both meticious and lazy. I want my environment a specific way, but I am far
 Follow the instructions on https://code.visualstudio.com/docs/devcontainers/containers#getstarted-articles. But basically you need: docker, vscode, and the dev container extension. 
 
 ## That's all great, how do get this dev container on my machine?
-There are a bunch of ways (see the documentation linked) but here are a few I have tried:
-* Clone this repo to a local folder using a tool of your choosing, and use VSCode to "Open Folder". It'll automagically recognize there is a dev container, and ask if you want to open it as a dev container. Say yes. Profit
-* Use VS Code to "Clone git repository to a local folder". It'll automagically recognize there is a dev container, and ask if you want to open it as a dev container. Say yes. Profit
- * Specifically, point it to this repo if you want this dev container. 
-* You can also use this task (press F1 in VS Code) "Dev Containers: Clone Repository in Container Volume" to clone this repo into its own local container on your machine. Any code you write, binaries you compile, will also be in that image. Tidy, but inconvinient if you need hands on those files. 
-
-Honestly, for your first go, I'd use VS Code to "Clone git repository to a local folder" Having direct access to your files is a nice safety blanket for ease of backing up.
+Two ways:
+* Use this dev container: All it does is pull down and apply cc65 development Dev Container template I created. Once this dev container is opened, it'll pull down the template https://github.com/dhirsch1138/cc65_template automatically. You'll be prompted to rebuild the container, say yes. If you aren't prompted you can invoke a rebuild using the VS Code task (F1) "Dec Containers: Rebuild Container".
+  * If you want everything in a container (including your source code) to keep stuff nice and tidy use the VS Code task (F1) "Dev Containers: Clone Repository in Container Volume". Provide this repo.
+  * If you want the code easily accessible outside the container use the native VS Code task (F1) "Git: Clone". Provide this repo and open the folder after cloning. VS Code will notice it is a dev container and prompt you to connect.
+  * Any other method. Just get this repo's contents in a folder and open it as a Dev Container in VS Code.
+* Another option is to avoid this specific repo, and use the cc65 development Dev Container directly. Use the VS Code task (F1) "Dev Containers: New Dev Container".
+  * When prompted for the container, type in "ghcr.io/dhirsch1138/cc65_template/cc65_buildrules" without the quotes. I encourage you to check out this repo before doing so, as you will be prompted to trust this container (as it'll be running code). This template is here: https://github.com/dhirsch1138/cc65_template
 
 **Recommended**: Use this folder structure to create your own git repo if you'd like to track your changes.
 

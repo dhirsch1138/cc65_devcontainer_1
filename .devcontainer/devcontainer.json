@@ -1,34 +1,18 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+// More info: https://containers.dev/implementors/json_reference/
 {
-	"name": "Debian + cc6502",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
-	"features": {	
-		"ghcr.io/dhirsch1138/cc65_feature/cc65:1": {},
-		"ghcr.io/dhirsch1138/minipro_feature/minipro:1": {}
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-18-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	"customizations": {
-		"vscode": {"extensions": [
-			                      "ms-vscode.makefile-tools",
-								  "github.vscode-github-actions",
-								  "tlgkccampbell.code-ca65"
-								  ]}
+		"vscode": {
+			"extensions": [
+				"mads-hartmann.bash-ide-vscode",
+				"dbaeumer.vscode-eslint",
+				"github.vscode-github-actions"
+			]
+		}
 	},
-
-	//hack to make fakeroot performant (I run Fedora, seems to affect that OS per report)
-	//https://github.com/containerd/containerd/pull/7566
-	"runArgs": ["--ulimit=nofile=1024:1048576"]
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"postCreateCommand": "npm install -g @devcontainers/cli && devcontainer templates apply -t 'ghcr.io/dhirsch1138/cc65_template/cc65_buildrules'",
+    "runArgs": ["--ulimit=nofile=1024:1048576"]
 }
