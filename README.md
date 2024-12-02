@@ -1,5 +1,5 @@
 # Notice #
-The 6502 development evironment has been moved into a Dev Container Template. This makes its intended use case (providing a starting point for your own projects) a lot easier.  I am leaving this repository, and its dev container, up in case folks were following my work here. I have made this dev container basically a shell, it'll try to overwrite itself and apply the new Dev Container Template upon itself.
+The 6502 development evironment has been moved into a Dev Container template @ https://github.com/dhirsch1138/cc65_template . This makes its intended use case (providing a starting point for your own projects) a lot easier.  I am leaving this repository, and its dev container, up in case folks were following my work here. I have made this dev container basically a shell, it'll try to overwrite itself and apply the new Dev Container Template upon itself.
 
 **WARNING** BACK UP YOUR CODE BEFORE TRYING TO APPLY THIS UPDATE TO AN EXISTING CONTAINER VOLUME, APPLYING THE TEMPLATE MIGHT OVERWRITE ANY LOCAL CHANGES
 
