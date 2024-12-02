@@ -3,6 +3,8 @@ The 6502 development evironment has been moved into a Dev Container Template. Th
 
 **WARNING** BACK UP YOUR CODE BEFORE TRYING TO APPLY THIS UPDATE TO AN EXISTING CONTAINER VOLUME, APPLYING THE TEMPLATE MIGHT OVERWRITE ANY LOCAL CHANGES
 
+Documentation about the 6502 development environment is now in https://github.com/dhirsch1138/cc65_template
+
 # How do get this dev container on my machine?
 As you have probably noticed, there isn't much in this repo anymore. I moved it all into a template to its use case (you using it to code your own projects, in your own repos) easier. The remaining container is just a shell.
 
